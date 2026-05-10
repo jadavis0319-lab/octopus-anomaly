@@ -23,24 +23,30 @@ const inter = Inter({
   display: 'swap',
 });
 
+const DESCRIPTION =
+  'Why every AI converges on the same answer. $OCTOPUS — the token that makes the anomaly tradeable.';
+
 export const metadata: Metadata = {
-  title: `${SITE_CONFIG.ticker} — ${SITE_CONFIG.tagline}`,
-  description: SITE_CONFIG.description,
+  title: SITE_CONFIG.tagline,
+  description: DESCRIPTION,
   keywords: ['octopus', 'solana', 'memecoin', 'AI', 'anomaly', 'OCTOPUS', 'crypto'],
   openGraph: {
-    title: `${SITE_CONFIG.ticker} — ${SITE_CONFIG.tagline}`,
-    description: SITE_CONFIG.description,
+    title: SITE_CONFIG.tagline,
+    description: DESCRIPTION,
     type: 'website',
     url: SITE_CONFIG.siteUrl,
+    images: [{ url: '/octopus-hero.png', alt: SITE_CONFIG.tagline }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${SITE_CONFIG.ticker} — ${SITE_CONFIG.tagline}`,
-    description: SITE_CONFIG.description,
+    title: SITE_CONFIG.tagline,
+    description: DESCRIPTION,
     creator: '@TheOctopusAI',
+    images: ['/octopus-hero.png'],
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: '/octopus-hero.png',
+    apple: '/octopus-hero.png',
   },
 };
 
