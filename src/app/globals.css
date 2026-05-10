@@ -1,0 +1,263 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Custom scrollbar ──────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #a855f780;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a855f7;
+}
+
+/* ── Base styles ───────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000000;
+  color: #f5f5f5;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── Selection color ───────────────────────────────────────── */
+::selection {
+  background: #a855f740;
+  color: #c084fc;
+}
+
+/* ── Scanlines overlay ─────────────────────────────────────── */
+.scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+}
+
+.scanline-sweep {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(168, 85, 247, 0.06) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 101;
+  animation: scanline 10s linear infinite;
+}
+
+/* ── Glitch text effect ────────────────────────────────────── */
+.glitch-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch-layer-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #3b82f6;
+  animation: glitch 8s ease-in-out infinite;
+  clip-path: inset(0 0 100% 0);
+}
+
+.glitch-layer-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #c084fc;
+  animation: glitch2 8s ease-in-out infinite 0.1s;
+  clip-path: inset(100% 0 0% 0);
+}
+
+/* ── Terminal cursor ───────────────────────────────────────── */
+.terminal-cursor {
+  display: inline-block;
+  width: 0.6em;
+  height: 1.1em;
+  background-color: #a855f7;
+  vertical-align: text-bottom;
+  animation: typingCursor 1s step-end infinite;
+  border-radius: 1px;
+}
+
+/* ── Neon glow utilities ────────────────────────────────────── */
+.glow-purple {
+  text-shadow: 0 0 10px #a855f780, 0 0 20px #a855f740;
+}
+
+.glow-purple-strong {
+  text-shadow: 0 0 10px #a855f7, 0 0 20px #a855f7, 0 0 40px #a855f780;
+}
+
+.glow-box-purple {
+  box-shadow: 0 0 10px #a855f720, 0 0 30px #a855f710;
+}
+
+.glow-box-purple-hover:hover {
+  box-shadow: 0 0 20px #a855f740, 0 0 40px #a855f720, inset 0 0 20px #a855f710;
+}
+
+/* ── ASCII art wrapper ─────────────────────────────────────── */
+.ascii-art {
+  font-family: var(--font-jetbrains), 'Courier New', monospace;
+  line-height: 1.2;
+  white-space: pre;
+  color: #a855f7;
+}
+
+/* ── Grid background ────────────────────────────────────────── */
+.bg-grid {
+  background-image: linear-gradient(rgba(168, 85, 247, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168, 85, 247, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ── Section divider ────────────────────────────────────────── */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #a855f740 20%,
+    #a855f780 50%,
+    #a855f740 80%,
+    transparent 100%
+  );
+}
+
+/* ── Burn progress bar animation ─────────────────────────────── */
+.burn-bar-fill {
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(90deg, #a855f7, #c084fc, #fbbf24);
+  box-shadow: 0 0 10px #a855f780, 0 0 20px #a855f740;
+}
+
+/* ── Accordion animation ─────────────────────────────────────── */
+.accordion-content {
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+}
+
+/* ── Copy button flash ───────────────────────────────────────── */
+@keyframes copyFlash {
+  0% { background-color: transparent; }
+  30% { background-color: rgba(168, 85, 247, 0.2); }
+  100% { background-color: transparent; }
+}
+
+.copy-flash {
+  animation: copyFlash 0.5s ease-out;
+}
+
+/* ── Particle canvas ─────────────────────────────────────────── */
+.particle-canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* ── Animated octopus image ──────────────────────────────────── */
+
+@keyframes octopusBreathe {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.02); }
+}
+
+@keyframes octopusFloat {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes octopusGlow {
+  0%, 100% { filter: drop-shadow(0 0 20px #a855f7); }
+  50%       { filter: drop-shadow(0 0 40px #c084fc); }
+}
+
+/* Outer wrapper — gentle breathe scale */
+.octopus-body-wrap {
+  display: inline-block;
+  animation: octopusBreathe 5.5s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+/* Hero image — float + glow, responsive sizing */
+.octopus-image {
+  display: block;
+  width: auto;
+  height: 460px;
+  max-width: min(500px, 90vw);
+  object-fit: contain;
+  animation: octopusFloat 4s ease-in-out infinite, octopusGlow 3s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .octopus-image {
+    height: 360px;
+  }
+}
+
+@media (max-width: 480px) {
+  .octopus-image {
+    width: 300px;
+    height: auto;
+    max-width: 85vw;
+  }
+}
+
+/* ── AI Screenshot hover zoom ────────────────────────────────── */
+/* Gated to pointer devices — no effect on touch screens */
+@media (hover: hover) {
+  /* Lift the hovered card above its grid siblings.
+     z-index reverts with a 320ms delay so the card stays elevated
+     while the scale-out animation (300ms) finishes. */
+  .screenshot-card {
+    z-index: 1;
+    transition: z-index 0ms 320ms;
+  }
+  .screenshot-card:hover {
+    z-index: 20;
+    transition: z-index 0ms 0ms;
+  }
+
+  /* Hit target — cursor signals interactivity */
+  .screenshot-container {
+    cursor: pointer;
+  }
+
+  /* Image scales from its own center; GPU-composited for smoothness */
+  .screenshot-img {
+    transform-origin: center;
+    will-change: transform;
+    transition: transform 300ms ease-out, box-shadow 300ms ease-out;
+  }
+
+  .screenshot-container:hover .screenshot-img {
+    transform: scale(2.3);
+    box-shadow:
+      0 0 0 1px rgba(168, 85, 247, 0.45),
+      0 4px 24px rgba(168, 85, 247, 0.55),
+      0 16px 56px rgba(168, 85, 247, 0.28);
+  }
+}
