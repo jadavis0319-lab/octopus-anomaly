@@ -89,20 +89,19 @@ export default function Footer() {
         </motion.div>
 
         {/* Bottom bar */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
           <span className="font-mono text-xs text-neutral-800">
             © {FOOTER.year} {SITE_CONFIG.ticker}
           </span>
-          <span className="font-mono text-xs text-neutral-800">
+          <span className="font-mono text-xs text-neutral-800 text-center">
             {FOOTER.credit}
           </span>
-        </div>
-        <div className="mt-3 text-right">
           <a
             href="https://x.com/joshcryptoweb"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono text-[10px] text-neutral-700 hover:text-neutral-500 transition-colors"
+            className="font-mono text-xs text-purple-400 hover:text-purple-300 transition-colors"
+            style={{ textShadow: '0 0 10px #c084fc, 0 0 20px rgba(192,132,252,0.5)' }}
           >
             want a site like this for your coin? dm @joshcryptoweb ↗
           </a>
