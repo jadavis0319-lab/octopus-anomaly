@@ -93,17 +93,24 @@ export default function Footer() {
           <span className="font-mono text-xs text-neutral-800">
             © {FOOTER.year} {SITE_CONFIG.ticker}
           </span>
-          <span className="font-mono text-xs text-neutral-800 text-center">
+          <span className="font-mono text-xs text-neutral-800">
             {FOOTER.credit}
           </span>
+        </div>
+
+        {/* Pitch link — padded group creates the proximity hover zone */}
+        <div className="group flex justify-center py-4 cursor-pointer">
           <a
             href="https://x.com/joshcryptoweb"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono text-xs text-purple-400 hover:text-purple-300 transition-colors"
-            style={{ textShadow: '0 0 10px #c084fc, 0 0 20px rgba(192,132,252,0.5)' }}
+            className="font-mono text-xs text-purple-400
+              [text-shadow:_0_0_10px_#c084fc,_0_0_20px_#c084fc80]
+              transition-all duration-300
+              group-hover:scale-105
+              group-hover:[text-shadow:_0_0_20px_#c084fc,_0_0_40px_#c084fccc]"
           >
-            want a site like this for your coin? dm @joshcryptoweb ↗
+            want a site like this for your coin? click here to dm @joshcryptoweb ↗
           </a>
         </div>
       </div>
