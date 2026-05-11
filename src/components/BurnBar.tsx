@@ -7,6 +7,7 @@ interface BurnBarProps {
   currentSupply: number | null;
   loading?: boolean;
   error?: boolean;
+  priceUsd?: number | null;
 }
 
 function fmt(n: number): string {
@@ -16,7 +17,13 @@ function fmt(n: number): string {
   return n.toLocaleString();
 }
 
-export default function BurnBar({ currentSupply, loading = false, error = false }: BurnBarProps) {
+function fmtUsd(value: number): string {
+  if (value >= 1_000) return '$' + Math.round(value).toLocaleString();
+  if (value >= 1) return '$' + Math.round(value).toString();
+  return '$' + value.toFixed(2);
+}
+
+export default function BurnBar({ currentSupply, loading = false, error = false, priceUsd }: BurnBarProps) {
   const [animated, setAnimated] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -75,6 +82,8 @@ export default function BurnBar({ currentSupply, loading = false, error = false 
 
   const burned = Math.max(0, initial - currentSupply);
   const burnPct = Math.min(100, (burned / initial) * 100);
+  const burnedUsd =
+    priceUsd != null && priceUsd > 0 && burned > 0 ? burned * priceUsd : null;
 
   return (
     <div ref={ref} className="space-y-4">
@@ -93,6 +102,16 @@ export default function BurnBar({ currentSupply, loading = false, error = false 
           <div className="font-mono text-sm text-amber-400">
             {burned > 0 ? fmt(burned) : '—'}
           </div>
+          {burnedUsd !== null && (
+            <>
+              <div className="font-mono text-sm font-semibold text-purple-400 mt-1">
+                {fmtUsd(burnedUsd)}
+              </div>
+              <div className="font-mono text-[10px] text-neutral-500 mt-0.5">
+                at current market price
+              </div>
+            </>
+          )}
         </div>
         <div>
           <div className="font-mono text-xs text-neutral-600 uppercase tracking-widest mb-1">

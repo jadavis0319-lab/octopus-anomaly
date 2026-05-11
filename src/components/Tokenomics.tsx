@@ -121,6 +121,7 @@ export default function Tokenomics() {
             currentSupply={supply}
             loading={supplyLoading}
             error={supplyError}
+            priceUsd={data?.priceUsd ? parseFloat(data.priceUsd) : null}
           />
 
           <p className="mt-5 font-sans text-sm text-neutral-500 leading-relaxed">
