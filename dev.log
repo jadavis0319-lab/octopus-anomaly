@@ -49,3 +49,10 @@
 <w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: EPERM: operation not permitted, rename 'C:\Users\jadav\claude stuff\octopus-anomaly\.next\cache\webpack\client-development\0.pack.gz_' -> 'C:\Users\jadav\claude stuff\octopus-anomaly\.next\cache\webpack\client-development\0.pack.gz'
  ✓ Compiled in 343ms (640 modules)
  ✓ Compiled in 181ms (640 modules)
+ ✓ Compiled in 687ms (640 modules)
+ ✓ Compiled in 112ms (640 modules)
+ ✓ Compiled in 110ms (640 modules)
+ ✓ Compiled in 120ms (640 modules)
+ ✓ Compiled in 132ms (640 modules)
+ ✓ Compiled in 130ms (640 modules)
+ ✓ Compiled in 144ms (640 modules)

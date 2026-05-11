@@ -61,6 +61,15 @@ export default function Footer() {
               {card.label} ↗
             </a>
           ))}
+          <a
+            href="https://x.com/joshcryptoweb"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-xs text-neutral-600 hover:text-purple-400
+              transition-colors tracking-wider uppercase"
+          >
+            Report a Bug ↗
+          </a>
         </motion.div>
 
         {/* Divider */}
@@ -87,6 +96,16 @@ export default function Footer() {
           <span className="font-mono text-xs text-neutral-800">
             {FOOTER.credit}
           </span>
+        </div>
+        <div className="mt-3 text-right">
+          <a
+            href="https://x.com/joshcryptoweb"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-[10px] text-neutral-700 hover:text-neutral-500 transition-colors"
+          >
+            want a site like this for your coin? dm @joshcryptoweb ↗
+          </a>
         </div>
       </div>
     </footer>
