@@ -98,8 +98,11 @@ export default function Footer() {
           </span>
         </div>
 
-        {/* Pitch link — padded group creates the proximity hover zone */}
-        <div className="group flex justify-center py-4 cursor-pointer">
+        {/* Credit line — padded group creates the proximity hover zone */}
+        <div className="group flex items-center justify-center py-4">
+          <span className="font-mono text-xs text-neutral-800 transition-colors duration-300 group-hover:text-neutral-600">
+            created by{' '}
+          </span>
           <a
             href="https://x.com/joshcryptoweb"
             target="_blank"
@@ -110,7 +113,7 @@ export default function Footer() {
               group-hover:scale-105
               group-hover:[text-shadow:_0_0_20px_#c084fc,_0_0_40px_#c084fccc]"
           >
-            want a site like this for your coin? click here to dm @joshcryptoweb ↗
+            @joshcryptoweb
           </a>
         </div>
       </div>
