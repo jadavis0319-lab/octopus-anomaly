@@ -12,7 +12,7 @@ export default function AsciiOctopus({ className = '' }: AsciiOctopusProps) {
   return (
     <div className={`octopus-body-wrap ${className}`}>
       <Image
-        src="/octopus-hero.png"
+        src="/octopus-hero-v2.png"
         alt="Octopus"
         width={500}
         height={500}

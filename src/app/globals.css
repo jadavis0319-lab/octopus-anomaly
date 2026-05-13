@@ -191,8 +191,8 @@ body {
 }
 
 @keyframes octopusGlow {
-  0%, 100% { filter: drop-shadow(0 0 20px #a855f7); }
-  50%       { filter: drop-shadow(0 0 40px #c084fc); }
+  0%, 100% { filter: drop-shadow(0 0 14px #a855f7); }
+  50%       { filter: drop-shadow(0 0 28px #c084fc); }
 }
 
 /* Outer wrapper — gentle breathe scale */

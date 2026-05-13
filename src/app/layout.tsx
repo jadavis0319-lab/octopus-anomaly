@@ -35,18 +35,18 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     type: 'website',
     url: SITE_CONFIG.siteUrl,
-    images: [{ url: '/octopus-hero.png', alt: SITE_CONFIG.tagline }],
+    images: [{ url: '/octopus-hero-v2.png', alt: SITE_CONFIG.tagline }],
   },
   twitter: {
     card: 'summary_large_image',
     title: SITE_CONFIG.tagline,
     description: DESCRIPTION,
     creator: '@TheOctopusAI',
-    images: ['/octopus-hero.png'],
+    images: ['/octopus-hero-v2.png'],
   },
   icons: {
-    icon: '/octopus-hero.png',
-    apple: '/octopus-hero.png',
+    icon: '/octopus-hero-v2.png',
+    apple: '/octopus-hero-v2.png',
   },
 };
 
