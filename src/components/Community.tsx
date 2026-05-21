@@ -126,7 +126,7 @@ export default function Community() {
             The anomaly grows stronger with every new mind it reaches.
           </p>
           <a
-            href="https://x.com/TheOctopusAI"
+            href="(insert link here)"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 font-mono text-sm tracking-wider uppercase

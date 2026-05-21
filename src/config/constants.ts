@@ -12,20 +12,20 @@ export const SITE_CONFIG = {
   subtagline: 'Why every AI converges on the same answer.',
   contractAddress: 'HDG8Ng6YLpiYXzBASD1Zd5Wh7T8DHRYFcbf4YGuvpump',
   initialSupply: 1_000_000_000,
-  siteUrl: 'https://octopusanomaly.xyz', // Update with your domain
+  siteUrl: '(insert link here)', // Update with your domain
   description:
     'Ask any major AI its favorite animal. They all say octopus. $OCTOPUS is the token that makes the anomaly tradeable.',
 };
 
 // ── External links ────────────────────────────────────────────
 export const LINKS = {
-  pumpFun: `https://pump.fun/coin/${SITE_CONFIG.contractAddress}`,
-  dexScreener: `https://dexscreener.com/solana/${SITE_CONFIG.contractAddress}`,
-  twitter: 'https://x.com/TheOctopusAI',
-  xCommunity: 'https://x.com/i/communities/2021920127839527246',
-  telegram: 'https://t.me/octopusportal',
-  phantom: 'https://phantom.app',
-  samAltmanTweet: 'https://x.com/sama/status/2050673943149945079',
+  pumpFun: '(insert link here)',
+  dexScreener: '(insert link here)',
+  twitter: '(insert link here)',
+  xCommunity: '(insert link here)',
+  telegram: '(insert link here)',
+  phantom: '(insert link here)',
+  samAltmanTweet: '(insert link here)',
 };
 
 // ── DexScreener API ───────────────────────────────────────────
@@ -119,7 +119,7 @@ export const HOW_TO_BUY_STEPS = [
     description:
       'Download Phantom wallet — the most widely used Solana wallet. Available as a browser extension and mobile app.',
     cta: 'Get Phantom',
-    href: 'https://phantom.app',
+    href: LINKS.phantom,
     note: null,
   },
   {

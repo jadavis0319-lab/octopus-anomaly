@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: SITE_CONFIG.tagline,
     description: DESCRIPTION,
-    creator: '@TheOctopusAI',
+    creator: '(insert handle here)',
     images: ['/octopus-hero-v2.png'],
   },
   icons: {

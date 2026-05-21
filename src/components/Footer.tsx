@@ -62,7 +62,7 @@ export default function Footer() {
             </a>
           ))}
           <a
-            href="https://x.com/joshcryptoweb"
+            href="(insert link here)"
             target="_blank"
             rel="noopener noreferrer"
             className="font-mono text-xs text-neutral-600 hover:text-purple-400
@@ -104,7 +104,7 @@ export default function Footer() {
             created by{' '}
           </span>
           <a
-            href="https://x.com/joshcryptoweb"
+            href="(insert link here)"
             target="_blank"
             rel="noopener noreferrer"
             className="font-mono text-xs text-purple-400
